@@ -102,3 +102,63 @@ header h1 {
     background: rgba(0, 242, 254, 0.1);
     padding-left: 15px;
 }
+.appointment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.option-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+}
+
+.option-card i {
+    font-size: 3em;
+    color: #00f2fe;
+    margin-bottom: 20px;
+}
+
+.option-card h2 {
+    color: #00f2fe;
+    margin: 15px 0;
+}
+
+.option-card p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.option-card a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.option-card a:hover {
+    background: rgba(0, 242, 254, 0.2);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+/* Icons */
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #00f2fe;
+}
