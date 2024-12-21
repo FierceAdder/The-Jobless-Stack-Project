@@ -62,6 +62,134 @@ header h1 {
     margin: 40px auto;
     padding: 0 20px;
 }
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 242, 254, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+}
+
+.skill-icon {
+    font-size: 3em;
+    color: #00f2fe;
+    margin-bottom: 20px;
+}
+
+.skill-card h2 {
+    color: #00f2fe;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+.skill-card h3 {
+    color: #00f2fe;
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+    position: relative;
+}
+
+
+.skill-card p {
+    color: #ccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.skill-card a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(0, 242, 254, 0.1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.skill-card a:hover {
+    background: rgba(0, 242, 254, 0.2);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    transform: translateX(5px);
+}
+
+.platform-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .platform-logo {
+    transform: scale(1.1);
+}
+.more-skills {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.more-skills-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, 
+        rgba(0, 242, 254, 0.2),
+        rgba(0, 242, 254, 0.1));
+    border: 2px solid rgba(0, 242, 254, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.more-skills-btn:hover {
+    background: linear-gradient(45deg, 
+        rgba(0, 242, 254, 0.3),
+        rgba(0, 242, 254, 0.2));
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    transform: scale(1.05);
+}
 
 .health-links {
     display: grid;
