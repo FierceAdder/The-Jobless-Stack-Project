@@ -6,12 +6,17 @@
     <title>Medical Appointments - MAATI SEVA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="health_facilities.css">
+    <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Medical Services</h1>
+        <h1>Medical Appointments - MAATI SEVA</h1>
     </header>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for services..." id="searchBox">
+        <div class="search-results" id="searchResults"></div>
+    </div>
     
     <nav class="navbar">
         <a href="index.html" class="back-button">← Back to Home</a>
@@ -41,5 +46,6 @@
             </div>
         </div>
     </div>
+<script src="search.js"></script>
 </body>
 </html>

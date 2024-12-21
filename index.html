@@ -6,11 +6,18 @@
     <title>MAATI SEVA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="health_facilities.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="search.css">
 </head>
 <body>
     <header>
         <h1>MAATI SEVA</h1>
     </header>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for services..." id="searchBox">
+        <div class="search-results" id="searchResults"></div>
+    </div>
+    
     <nav class="navbar">
         <div class="dropdown">
             <a href="#">HEALTH FACILITIES</a>
@@ -62,5 +69,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>
