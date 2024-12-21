@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Advice - MAATI SEVA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #fff;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            background: linear-gradient(45deg, 
+                rgba(0, 0, 0, 0.7),
+                rgba(20, 20, 20, 0.7),
+                rgba(0, 0, 0, 0.7));
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            padding: 20px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 
+                0 0 20px rgba(0, 242, 254, 0.5),
+                0 0 40px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+            padding: 15px 20px;
+        }
+
+        .back-button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 242, 254, 0.1);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .health-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .health-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .health-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
+        }
+
+        .health-card h3 {
+            color: #00f2fe;
+            margin-top: 0;
+        }
+
+        .health-card a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .health-card a:hover {
+            background: rgba(0, 242, 254, 0.1);
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health Advice</h1>
+    </header>
+    
+    <nav class="navbar">
+        <a href="html2.html" class="back-button">← Back to Home</a>
+    </nav>
+
+    <div class="content">
+        <div class="health-links">
+            <div class="health-card">
+                <h3>General Health Resources</h3>
+                <a href="https://www.who.int/health-topics" target="_blank">World Health Organization</a>
+                <a href="https://www.mohfw.gov.in/" target="_blank">Ministry of Health India</a>
+                <a href="https://www.nhp.gov.in/" target="_blank">National Health Portal</a>
+            </div>
+
+            <div class="health-card">
+                <h3>Health Information</h3>
+                <a href="https://www.mayoclinic.org/healthy-lifestyle" target="_blank">Mayo Clinic Health Info</a>
+                <a href="https://medlineplus.gov/" target="_blank">MedlinePlus Health Information</a>
+                <a href="https://www.cdc.gov/healthyliving/" target="_blank">CDC Healthy Living</a>
+            </div>
+
+            <div class="health-card">
+                <h3>Mental Health Resources</h3>
+                <a href="https://www.nimh.nih.gov/" target="_blank">National Institute of Mental Health</a>
+                <a href="https://www.who.int/mental_health" target="_blank">WHO Mental Health</a>
+                <a href="https://www.mind.org.uk/" target="_blank">Mind Mental Health</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAATI SEVA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #fff;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            background: linear-gradient(45deg, 
+                rgba(0, 0, 0, 0.7),
+                rgba(20, 20, 20, 0.7),
+                rgba(0, 0, 0, 0.7)),
+                url('https://plus.unsplash.com/premium_photo-1661957883806-4f6d9ffff913?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmlsbGFnZSUyMGhvdXNlfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 10px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            margin: 0;
+            padding: 20px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 
+                0 0 20px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(0, 0, 0, 0.6),
+                2px 2px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        header h1:hover {
+            cursor: default;
+            transform: scale(1.01);
+            transition: transform 0.3s ease;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+            padding: 0 20px;
+            position: relative;
+            z-index: 2000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 24px;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .navbar a:hover::before {
+            left: 100%;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            margin: 0 10px;
+            z-index: 2000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-radius: 8px;
+            z-index: 2000;
+            margin-top: 2px;
+        }
+
+        .dropdown-content a {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(0, 242, 254, 0.1);
+            transform: translateX(10px);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .dropdown > a::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-shadow: 0 0 5px rgba(0, 242, 254, 0.8);
+            animation: arrowPulse 1.5s infinite alternate;
+        }
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 250%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .dots-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes arrowPulse {
+            0% {
+                opacity: 0.5;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(2px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MAATI SEVA</h1>
+    </header>
+    <nav class="navbar">
+        <div class="dropdown">
+            <a href="#">HEALTH FACILITIES</a>
+            <div class="dropdown-content">
+                <a href="https://www.practo.com" target="_blank">Appointment</a>
+                <a href=" https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank">Medicine</a>
+                
+                <a href="health-advice.html">Advice</a>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">EDUCATIONAL FACILITIES</a>
+            <div class="dropdown-content">
+                <a href="#">School</a>
+                <a href="#">College</a>
+                <a href="#">Professional</a>
+                <a href="#">Exam Updates</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">FINANCIAL FACILITIES</a>
+            <div class="dropdown-content">
+                <a href="#">Invest</a>
+                <a href="#">Learn</a>
+                <a href="#">Loan</a>
+                <a href="#">LIC</a>
+                <a href="#">Advice</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">AGRICULTURAL FACILITIES</a>
+            <div class="dropdown-content">
+                <a href="#">Equipments</a>
+                <a href="#">Modern Technology</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="slide active" style="background-image: url('https://media.istockphoto.com/id/1130934349/photo/doctor-doing-social-service-in-village.jpg?s=1024x1024&w=is&k=20&c=W00xSteg-0hGvRp4r9TenlcwjOi0d3giOcyr7bxVNXs=');"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506126279646-a697353d3166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1970&q=80');"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');"></div>
+        
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+        
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
