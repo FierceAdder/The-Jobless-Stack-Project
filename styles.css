@@ -1,0 +1,95 @@
+/* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+            padding: 0 20px;
+            position: relative;
+            z-index: 2000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 24px;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .navbar a:hover::before {
+            left: 100%;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            margin: 0 10px;
+            z-index: 2000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-radius: 8px;
+            z-index: 2000;
+            margin-top: 2px;
+        }
+
+        .dropdown-content a {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(0, 242, 254, 0.1);
+            transform: translateX(10px);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .dropdown > a::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-shadow: 0 0 5px rgba(0, 242, 254, 0.8);
+            animation: arrowPulse 1.5s infinite alternate;
+        }
+
+
+        
