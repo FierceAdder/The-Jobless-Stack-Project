@@ -85,6 +85,133 @@
     <script src="script.js"></script>
     
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <footer class="footer">
+    <div class="footer-content">
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com/your_handle" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/your_profile" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/your_channel" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
 
+         <!-- Copyright Section -->
+        <div class="copyright-section">
+            <p>&copy; 2024 THE_JOBLESS_STACK</p>
+            <p>ALL RIGHTS RESERVED</p>
+        </div>
+
+        <!-- Contribution Section -->
+        <div class="contribution-section">
+            <h3>Contribute</h3>
+            <p>Send your ideas at this email:</p>
+            <a href="mailto:TheJoblessStack60904@gmail.com" class="email-link">thejoblessstack60904@gmail.com</a>
+        </div>
+
+       
+       
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background: linear-gradient(45deg, 
+            rgba(0, 0, 0, 0.7),
+            rgba(20, 20, 20, 0.7),
+            rgba(0, 0, 0, 0.7));
+        border-top: 1px solid rgba(0, 242, 254, 0.2);
+        box-shadow: 0 -2px 20px rgba(0, 242, 254, 0.3);
+        padding: 40px 0;
+        margin-top: 50px;
+        overflow: scroll;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .footer h3 {
+        color: #00f2fe;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        color: #fff;
+        font-size: 24px;
+        padding: 10px;
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .social-icon:hover {
+        background: rgba(0, 242, 254, 0.1);
+        box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        transform: translateY(-5px);
+    }
+
+    .contribution-section p {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .email-link {
+        color: #00f2fe;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+    }
+
+    .email-link:hover {
+        text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+    }
+
+    .copyright-section {
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 242, 254, 0.2);
+        margin-top: 20px;
+    }
+
+    .copyright-section p {
+        color: #fff;
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+</style>
 </body>
 </html>

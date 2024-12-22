@@ -20,7 +20,7 @@
             font-weight: 500;
             white-space: nowrap;
             position: relative;
-            overflow: hidden;
+            overflow: scroll;
         }
 
         .navbar a::before {
@@ -97,6 +97,7 @@
             overflow:visible;
             margin-top: 20px;
             z-index: 1;
+            overflow: visible;
         }
 
         .slide {
@@ -108,11 +109,13 @@
             background-size:calc(100%);
             background-position: center;
             background-repeat: no-repeat;
+            overflow: scroll;
             
         }
 
         .slide.active {
             opacity: 1;
+            overflow: scroll;
         }
 
         .dots-container {
