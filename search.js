@@ -43,22 +43,19 @@ const searchData = [
     
     // Financial Facilities
     { title: 'Investment Services', url: 'https://zerodha.com' },
-    { title: 'Financial Learning', url: '#' },
-    { title: 'Loan Services', url: '#' },
-    { title: 'LIC Services', url: '#' },
-    { title: 'Financial Advice', url: '#' },
+    { title: 'Financial Learning', url: '/financial-learn.html' },
+    { title: 'Loan Services', url: '/financial-loan.html' },
+    { title: 'LIC Services', url: 'https://licindia.in/' },
     
     // Agricultural Facilities
-    { title: 'Agricultural Equipment', url: '#' },
-    { title: 'Modern Farming Technology', url: '#' },
+    { title: 'Agricultural Equipment', url: '/agricultural-equipment.html' },
+    { title: 'Modern Farming Technology', url: '/modern-agriculture.html' },
+    { title: 'Crop support', url: '/crop-support.html' },
     
     // Home
     { title: 'Home Page', url: '/index.html' },
     // Financial Facilities
-    { title: 'Financial Learning', url: '/financial-learn.html' },
-    { title: 'learn finance by chapter', url: 'https://zerodha.com/varsity/modules/' },
-    { title: 'learn finace with live class', url: 'https://varsitylive.zerodha.com/home' },
-    { title: 'learn finance with video lectures', url: 'https://zerodha.com/varsity/video-modules/' }
+    
 ];
 
 function initializeSearch() {
