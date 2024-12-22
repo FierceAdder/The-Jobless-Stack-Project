@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="health_facilities.css">
+    <link rel="stylesheet" href="crop-support.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Farming Support - MAATI SEVA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
+</head>
+<body>
+    <header>
+        <h1>CROP FARMING SUPPORT</h1>
+        <div class="translator"id="google_translate_element"></div>
+    </header>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search..." id="searchBox">
+        <div class="search-results" id="searchResults"></div>
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </nav>
+
+    <div class="crop-support-container">
+        <div class="input-group">
+            <label>Select Crop Type</label>
+            <select id="cropType">
+                <option value="">Select type...</option>
+                <option value="crop">Crop</option>
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Enter Crop Name</label>
+            <input type="text" id="cropName" placeholder="E.g., Wheat, Tomato, Mango">
+        </div>
+
+        <div class="input-group">
+            <label>Location</label>
+            <input type="text" id="location" placeholder="Enter your location">
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeCropConditions()">Analyze Growing Conditions</button>
+
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i> Analyzing conditions...
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="weather-info">
+                <div class="info-title">Weather Forecast</div>
+                <div id="weatherDetails"></div>
+            </div>
+
+            <div class="crop-info">
+                <div class="info-title">Crop Requirements</div>
+                <div id="cropRequirements"></div>
+            </div>
+
+            <div class="recommendation" id="recommendation">
+                <div class="info-title">Recommendation</div>
+                <div id="recommendationText"></div>
+            </div>
+        </div>
+    </div>
+    <script src="search.js"></script>
+    <script src="crop-support.js"></script>
+    <script src="search.js"></script><script src="script.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
