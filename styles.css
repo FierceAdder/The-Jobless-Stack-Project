@@ -398,4 +398,181 @@
                 gap: 30px;
             }
         }
+        /* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 6px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 180px;
+    }
+
+    .search-container {
+        width: 90%;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        margin: 10px 0;
+    }
+
+    .chat-container {
+        width: 300px;
+        right: 10px;
+        bottom: 80px;
+    }
+
+    .chat-button {
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 1.5em;
+        letter-spacing: 4px;
+        padding: 15px;
+    }
+
+    .search-container {
+        width: 95%;
+    }
+
+    .search-box {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-card h2 {
+        font-size: 1.2em;
+    }
+
+    .chat-container {
+        width: 90%;
+        height: 400px;
+        right: 5%;
+        left: 5%;
+        bottom: 70px;
+    }
+
+    .chat-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-button i {
+        font-size: 20px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .service-card:hover,
+    .social-icon:hover,
+    .chat-button:hover {
+        transform: none;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .chat-container {
+        height: 80vh;
+        bottom: 60px;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .service-card,
+    .chat-container,
+    .footer {
+        border-width: 0.5px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .chat-button,
+    .chat-container,
+    .theme-switch {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .service-card {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Your dark theme is already implemented */
+}
+
+/* Ensure minimum touch target size */
+@media (pointer: coarse) {
+    button,
+    .service-card a,
+    .social-icon,
+    .chat-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
         
