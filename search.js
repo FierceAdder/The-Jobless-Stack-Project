@@ -42,7 +42,7 @@ const searchData = [
     { title: 'Textile Industry', url: '/skills.html#textile' },
     
     // Financial Facilities
-    { title: 'Investment Services', url: '#' },
+    { title: 'Investment Services', url: 'https://zerodha.com' },
     { title: 'Financial Learning', url: '#' },
     { title: 'Loan Services', url: '#' },
     { title: 'LIC Services', url: '#' },
