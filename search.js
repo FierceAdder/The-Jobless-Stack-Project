@@ -53,7 +53,12 @@ const searchData = [
     { title: 'Modern Farming Technology', url: '#' },
     
     // Home
-    { title: 'Home Page', url: '/index.html' }
+    { title: 'Home Page', url: '/index.html' },
+    // Financial Facilities
+    { title: 'Financial Learning', url: '/financial-learn.html' },
+    { title: 'learn finance by chapter', url: 'https://zerodha.com/varsity/modules/' },
+    { title: 'learn finace with live class', url: 'https://varsitylive.zerodha.com/home' },
+    { title: 'learn finance with video lectures', url: 'https://zerodha.com/varsity/video-modules/' }
 ];
 
 function initializeSearch() {

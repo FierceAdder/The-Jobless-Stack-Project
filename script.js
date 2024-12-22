@@ -24,3 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setInterval(nextSlide, 5000);
 });
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {pageLanguage: 'en'},
+        'google_translate_element'
+    );}
