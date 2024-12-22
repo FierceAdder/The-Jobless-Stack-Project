@@ -1,0 +1,77 @@
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 242, 254, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.tech-card:hover::before {
+    left: 100%;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+}
+
+.tech-icon {
+    font-size: 3em;
+    color: #00f2fe;
+    margin-bottom: 20px;
+}
+
+.tech-card h2 {
+    color: #00f2fe;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.tech-card p {
+    color: #ccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.tech-card a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(0, 242, 254, 0.1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.tech-card a:hover {
+    background: rgba(0, 242, 254, 0.2);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    transform: translateX(5px);
+}
