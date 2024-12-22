@@ -6,7 +6,20 @@ const chatResponses = {
     'contact': 'You can reach us through our social media channels or email us at your.email@example.com',
     'crops': 'We provide information about various crops, their growing conditions, and recommendations based on weather.',
     'weather': 'Our crop support system provides real-time weather data and crop suitability analysis.',
-    'equipment': 'We offer information about various agricultural equipment and machinery through our equipment section.',
+    'appointment': 'we offer facilities to connect you directly through doctor please visit the appointment section for further enquiries',
+    'medicine':'government of india offers facilities to buy generic medicines at low cost please visit the medicine section for further enquiries',
+    'school':'if you are a school students we offer study material for different classes please visit the school section for further enquiries',
+    'competitive exam':'for study materials of competitive exams please visit the school section for further enquiries',
+    'professional':'for learning professions we also recommend some courses please visit the proffesional section for further enquiries',
+    'exam updates': 'for exam updates visit exam updates section',
+    'skill' :'for learning genera skills we also recommend some courses please visit the skils section for further enquiries',
+    'learn finance' : 'for learning finance we have a trading platform course  please visit the learn section for further enquiries',
+    'invest':'for investing we recommend a free platform please visit the learn invest for further enquiries',
+    'loan': 'for loans we provide links to trusted government banks please visit the loan section for further enquiries',
+    'emi calculator':'for calculating emi we have our own calculator please visit the loan section for further enquiries',
+    'crop support':'for predicting the weather and protecting the crops we have our exclusive crop support system please visit the crop support section for further enquiries',
+    'equipments':'for buying agriculture equipments we offer major category please visit the equipments section for further enquiries',
+    'modern technology':'for accesing information about various technology applied in agriculture visit modern technology section',
     'default': 'I apologize, but I\'m not sure about that. Would you like to know about our services, crop recommendations, or contact information?'
 };
 
